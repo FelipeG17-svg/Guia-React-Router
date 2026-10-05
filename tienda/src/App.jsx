@@ -10,7 +10,6 @@ import Carrito from './paginas/Carrito.jsx'
 import Checkout from './paginas/Checkout.jsx'
 import NoEncontrada from './paginas/NoEncontrada.jsx'
 
-// MÓDULO 3 · Paso 16: lee el carrito guardado (si está corrupto, parte vacío).
 function leerCarritoGuardado() {
   try {
     const guardado = localStorage.getItem('lqtlv-carrito')
@@ -21,7 +20,7 @@ function leerCarritoGuardado() {
 }
 
 export default function App() {
-  // El carrito lo usan varias rutas, por eso vive aquí (estado levantado).
+ 
   const [carrito, setCarrito] = useState(leerCarritoGuardado)
 
   useEffect(() => {
@@ -41,8 +40,6 @@ export default function App() {
   const vaciar = () => setCarrito([])
   const totalItems = carrito.reduce((suma, i) => suma + i.cantidad, 0)
 
-  // MÓDULO 1 · Pasos 5, 7 y 8: el mapa del sitio.
-  // Las rutas hijas van SIN barra inicial; "index" es la portada; "*" es el 404.
   return (
     <Routes>
       <Route path="/" element={<Layout totalItems={totalItems} />}>

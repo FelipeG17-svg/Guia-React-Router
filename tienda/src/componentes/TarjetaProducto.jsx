@@ -5,8 +5,6 @@ import Card from 'react-bootstrap/Card'
 
 import { formatearPrecio } from '../datos/productos.js'
 
-// MÓDULO 2 · Paso 10: ahora "Ver detalle" es un Link real a /producto/:id
-// (se puede abrir en otra pestaña y copiar). Ya no recibe onVerDetalle.
 export default function TarjetaProducto({ producto }) {
   return (
     <Card className="h-100 shadow-sm">

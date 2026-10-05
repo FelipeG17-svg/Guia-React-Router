@@ -5,11 +5,10 @@ import Button from 'react-bootstrap/Button'
 import { buscarProducto, formatearPrecio } from '../datos/productos.js'
 
 export default function DetalleProducto({ onAgregar }) {
-  const { id } = useParams() // siempre texto; buscarProducto ya usa Number(id)
+  const { id } = useParams() 
   const navegar = useNavigate()
   const producto = buscarProducto(id)
 
-  // Caso de id inexistente (/producto/999)
   if (!producto) {
     return (
       <>
@@ -23,7 +22,7 @@ export default function DetalleProducto({ onAgregar }) {
 
   function agregar() {
     onAgregar(producto)
-    navegar('/carrito') // navegar después de un evento → useNavigate
+    navegar('/carrito') 
   }
 
   return (

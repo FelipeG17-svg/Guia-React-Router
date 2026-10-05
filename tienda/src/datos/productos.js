@@ -1,7 +1,3 @@
-// Catálogo de la tienda «Lo quieres, te lo vendo».
-// En un proyecto real estos datos vendrían de una API; aquí van en un archivo
-// para que la clase se concentre en las rutas y no en el backend.
-
 export const productos = [
   {
     id: 1,
@@ -85,7 +81,6 @@ export const productos = [
   },
 ]
 
-// Utilidad usada por varias páginas: formatea un número como precio chileno.
 export function formatearPrecio(valor) {
   return valor.toLocaleString('es-CL', {
     style: 'currency',
@@ -94,8 +89,6 @@ export function formatearPrecio(valor) {
   })
 }
 
-// Devuelve un producto por su id. Ojo: el id que entrega useParams es texto,
-// por eso comparamos con Number().
 export function buscarProducto(id) {
   return productos.find((producto) => producto.id === Number(id))
 }

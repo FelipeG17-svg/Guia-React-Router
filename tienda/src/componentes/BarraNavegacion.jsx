@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
-// MÓDULO 1 · Paso 9: barra responsiva (hamburguesa bajo 992 px).
 export default function BarraNavegacion({ totalItems }) {
   const [abierta, setAbierta] = useState(false)
   const cerrar = () => setAbierta(false) // cierra el menú al tocar un enlace

@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router'
 
-// MÓDULO 1 · Paso 8: ruta comodín (404) que muestra qué dirección falló.
 export default function NoEncontrada() {
   const ubicacion = useLocation()
   return (

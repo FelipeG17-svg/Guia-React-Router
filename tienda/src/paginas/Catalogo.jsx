@@ -7,7 +7,7 @@ import TarjetaProducto from '../componentes/TarjetaProducto.jsx'
 import { categorias, productos } from '../datos/productos.js'
 
 export default function Catalogo() {
-  // MÓDULO 3 · Paso 14: el filtro vive en la URL (?buscar=...&categoria=...)
+
   const [parametros, setParametros] = useSearchParams()
   const texto = parametros.get('buscar') ?? ''
   const categoria = parametros.get('categoria') ?? ''
@@ -47,7 +47,6 @@ export default function Catalogo() {
         </Col>
       </Row>
 
-      {/* MÓDULO 2 · Paso 12: 1 columna en móvil, 2 desde 576 px, 3 desde 992 px */}
       <Row xs={1} sm={2} lg={3} className="g-3">
         {visibles.map((item) => (
           <Col key={item.id}>

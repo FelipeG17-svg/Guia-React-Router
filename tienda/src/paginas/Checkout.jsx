@@ -1,7 +1,6 @@
 import { Navigate } from 'react-router'
 import Button from 'react-bootstrap/Button'
 
-// MÓDULO 3 · Paso 17: ruta protegida. Sin carrito, redirige (con replace).
 export default function Checkout({ carrito, onVaciar }) {
   if (carrito.length === 0) {
     return <Navigate to="/carrito" replace />
