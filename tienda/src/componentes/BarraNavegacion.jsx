@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 export default function BarraNavegacion({ totalItems }) {
   const [abierta, setAbierta] = useState(false)
-  const cerrar = () => setAbierta(false) // cierra el menú al tocar un enlace
+  const cerrar = () => setAbierta(false) 
 
   return (
     <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top" expanded={abierta} onToggle={setAbierta}>
@@ -18,7 +18,7 @@ export default function BarraNavegacion({ totalItems }) {
         <Navbar.Toggle aria-controls="menu-principal" />
         <Navbar.Collapse id="menu-principal">
           <Nav className="ms-auto">
-            {/* "end" evita que Inicio quede activo en todas las rutas */}
+           
             <Nav.Link as={NavLink} to="/" end onClick={cerrar}>Inicio</Nav.Link>
             <Nav.Link as={NavLink} to="/catalogo" onClick={cerrar}>Catálogo</Nav.Link>
             <Nav.Link as={NavLink} to="/nosotros" onClick={cerrar}>Nosotros</Nav.Link>
